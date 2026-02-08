@@ -1,0 +1,120 @@
+/*
+Theme Name: Astra Child
+Template: astra
+Version: 1.0.0
+*/
+
+@media (max-width: 921px) {
+    .ast-header-break-point .main-header-menu{
+        background: white;
+    }
+    /* Контент меню - выезжает слева */
+    .ast-mobile-header-content {
+        position: fixed !important;
+        left: 0 !important;
+        top: 0 !important;
+        height: 100% !important;
+        width: 50% !important;
+        max-width: 400px !important;
+        z-index: 999999 !important;
+        background: #ffffff !important;
+        transform: translateX(-100%) !important;
+        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+        box-shadow: 5px 0 25px rgba(0, 0, 0, 0.15) !important;
+        overflow-y: auto !important;
+        padding-top: 80px !important;
+        display: block !important;
+    }
+
+    /* Активное состояние */
+    .ast-mobile-header-content.active {
+        transform: translateX(0) !important;
+    }
+
+    /* Хедер остаётся на месте */
+    .ast-main-header-wrap {
+        position: relative !important;
+        z-index: 999998 !important;
+    }
+
+    /* Кнопка бургер */
+    .menu-toggle {
+        position: fixed !important;
+        right: 15px !important;
+        top: 70px !important;
+        z-index: 999999 !important;
+    }
+
+    /* Иконки - показываем/скрываем в зависимости от состояния */
+    .menu-toggle[aria-expanded="false"] .ast-menu2-svg {
+        display: block !important;
+    }
+
+    .menu-toggle[aria-expanded="false"] .ast-close-svg {
+        display: none !important;
+    }
+
+    .menu-toggle[aria-expanded="true"] .ast-menu2-svg {
+        display: none !important;
+    }
+
+    .menu-toggle[aria-expanded="true"] .ast-close-svg {
+        display: block !important;
+    }
+
+    /* Стили пунктов меню */
+    .ast-mobile-header-content .main-header-menu {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        padding: 0 20px 30px !important;
+    }
+
+    .ast-mobile-header-content .menu-item {
+        width: 100% !important;
+        margin: 0 !important;
+    }
+
+    .ast-mobile-header-content .menu-item a {
+        display: block !important;
+        border-bottom: 1px solid #f0f0f0 !important;
+        font-size: 18px !important;
+        font-weight: 500 !important;
+        color: #333 !important;
+    }
+
+    .ast-mobile-header-content .menu-item a:hover {
+        background: #f8f8f8 !important;
+        color: #0274eb !important;
+        padding-left: 25px !important;
+    }
+
+    /* Затемнение фона */
+    body.menu-open {
+        overflow: hidden !important;
+    }
+
+    body.menu-open:before {
+        content: '' !important;
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        background: rgba(0, 0, 0, 0.6) !important;
+        z-index: 99 !important;
+        opacity: 0 !important;
+        transition: opacity 0.4s ease !important;
+    }
+
+    body.menu-open:before {
+        opacity: 1 !important;
+    }
+    .ast-header-break-point .ast-builder-menu-1 .menu-item.menu-item-has-children > .ast-menu-toggle{
+        top:8px;
+    }
+}
+@media (max-width: 600px) {
+    .ast-mobile-header-content {
+        width: 70%!important;
+    }
+}

@@ -1,0 +1,126 @@
+/* FAQ Admin Styles */
+.faq-item {
+    margin-bottom: 25px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-color: #007cba;
+}
+
+.faq-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.faq-item-header h3 {
+    margin: 0;
+    color: #2c3e50;
+    font-size: 1.2em;
+}
+
+.remove-faq-item {
+    background: #dc3232;
+    color: #fff;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.remove-faq-item:hover:not(:disabled) {
+    background: #c42222;
+}
+
+.remove-faq-item:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.remove-faq-item .dashicons {
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.faq-item-content {
+    padding-left: 10px;
+}
+
+.faq-actions {
+    margin: 30px 0;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+#add-faq-item {
+    background: #007cba;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#add-faq-item:hover {
+    background: #005a87;
+}
+
+#add-faq-item .dashicons {
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.required {
+    color: #dc3232;
+    font-weight: bold;
+}
+
+.highlight-error {
+    border-color: #dc3232 !important;
+    box-shadow: 0 0 0 2px rgba(220, 50, 50, 0.2) !important;
+}
+
+.faq-loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.9);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.faq-loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #007cba;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
