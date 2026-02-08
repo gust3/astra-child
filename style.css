@@ -5,8 +5,11 @@ Version: 1.0.0
 */
 
 @media (max-width: 921px) {
+    .ast-primary-header-bar.ast-primary-header.main-header-bar{
+        background: none;
+    }
     .ast-header-break-point .main-header-menu{
-        background: white;
+        background: none;
     }
     /* Контент меню - выезжает слева */
     .ast-mobile-header-content {
@@ -41,8 +44,11 @@ Version: 1.0.0
     .menu-toggle {
         position: fixed !important;
         right: 15px !important;
-        top: 70px !important;
+        top: 30px !important;
         z-index: 999999 !important;
+    }
+    .admin-bar .menu-toggle {
+        top: 70px !important;
     }
 
     /* Иконки - показываем/скрываем в зависимости от состояния */
